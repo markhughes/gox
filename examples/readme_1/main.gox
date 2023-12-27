@@ -1,6 +1,6 @@
 package main
 
-import "github.com/gopherjs/vecty"
+import "github.com/hexops/vecty"
 
 type Page struct{
 	vecty.Core

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/gopherjs/vecty"
+import "github.com/hexops/vecty"
 
 func getHTML() vecty.HTML {
     return <div></div>

@@ -2,7 +2,7 @@ package components
 
 import (
 	"strconv"
-	"github.com/gopherjs/vecty"
+	"github.com/hexops/vecty"
 	"syscall/js"
 )
 

@@ -5,7 +5,7 @@ import (
 	"github.com/8byt/gox/examples/todomvc/dispatcher"
 	"github.com/8byt/gox/examples/todomvc/store"
 	"github.com/8byt/gox/examples/todomvc/store/model"
-	"github.com/gopherjs/vecty"
+	"github.com/hexops/vecty"
 )
 
 // FilterButton is a vecty.Component which allows the user to select a filter

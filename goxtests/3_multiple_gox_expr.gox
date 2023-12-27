@@ -1,6 +1,6 @@
 package components
 
-import "github.com/gopherjs/vecty"
+import "github.com/hexops/vecty"
 
 func nestedMore() vecty.ComponentOrHTML {
 	return <div class="classy">

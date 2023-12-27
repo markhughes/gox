@@ -3,7 +3,7 @@ package main
 import (
 	components "github.com/8byt/gox/goxtests"
 	"github.com/gopherjs/gopherjs/js"
-	"github.com/gopherjs/vecty"
+	"github.com/hexops/vecty"
 )
 
 func main() {

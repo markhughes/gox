@@ -1,6 +1,6 @@
 package components
 
-import "github.com/gopherjs/vecty"
+import "github.com/hexops/vecty"
 
 func bareContent() vecty.ComponentOrHTML {
 	return <div>I am bare content</div>

@@ -4,7 +4,7 @@ import (
 	"github.com/8byt/gox/examples/todomvc/actions"
 	"github.com/8byt/gox/examples/todomvc/dispatcher"
 	"github.com/8byt/gox/examples/todomvc/store/model"
-	"github.com/gopherjs/vecty"
+	"github.com/hexops/vecty"
 )
 
 // ItemView is a vecty.Component which represents a single item in the TODO
@@ -45,7 +45,10 @@ func (p *ItemView) onStartEdit(event *vecty.Event) {
 	p.editing = true
 	p.editTitle = p.Item.Title
 	vecty.Rerender(p)
-	p.input.Node().Call("focus")
+	html, ok := p.input.(*vecty.HTML)
+	if ok {
+		html.Node().Call("focus")
+	}
 }
 
 func (p *ItemView) onEditInput(event *vecty.Event) {

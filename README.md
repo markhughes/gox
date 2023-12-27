@@ -1,17 +1,19 @@
 # gox
 
+> Note: This has been updated to with with go 1.20+ and the new version of vecty
+
 ### gox is an extension of Go's syntax that let's you write HTML-style tags directly in your source code.
 
 #### In other words, it's JSX for Go.
 
-Write HTML-style tags directly in your Go source, and have them get transpiled into [Vecty](https://github.com/gopherjs/vecty) components that can be run with GopherJS or WebAssembly.
+Write HTML-style tags directly in your Go source, and have them get transpiled into [Vecty](https://github.com/hexops/vecty) components that can be run with GopherJS or WebAssembly.
 
 Okay take a look:
 
 ```
 package main
 
-import "github.com/gopherjs/vecty"
+import "github.com/hexops/vecty"
 
 type Page struct{
 	vecty.Core
@@ -41,7 +43,7 @@ go run . examples/
 
 go install github.com/hajimehoshi/wasmserve
 
-wasmserve github.com/8byt/gox/examples/readme_1/
+wasmserve -http :9000 .//examples/readme_1/
 google-chrome http://localhost:8080
 ```
 
@@ -97,7 +99,7 @@ For now, clone this repo, and build it.
 
 Use `gox <directory>` to convert `.gox` files into `.go` files (they stay in the same directory)
 
-GopherJS should take care of the rest, use [Vecty's docs](https://github.com/gopherjs/vecty) and [GopherJS's docs](https://github.com/gopherjs/gopherjs) to learn more. We use `gopherjs serve` and things magically get transpiled again.
+GopherJS should take care of the rest, use [Vecty's docs](https://github.com/hexops/vecty) and [GopherJS's docs](https://github.com/gopherjs/gopherjs) to learn more. We use `gopherjs serve` and things magically get transpiled again.
 
 If you want to make this process better, we'd be happy to consider your ideas/PRs.
 
